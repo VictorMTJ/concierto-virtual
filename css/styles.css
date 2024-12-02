@@ -1,0 +1,368 @@
+/* ==================== VARIABLES GLOBALES ==================== */
+:root {
+    /* Colores */
+    --primary-color: #8bd876;
+    --background-color: #1e1e1e;
+    --text-color: #FFFFFF;
+    --color-gray: #808080;
+
+    /* Tipografía */
+    --font-main: 'Arial', sans-serif;
+    --font-size-base: 16px;
+
+    /* Espaciado */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+
+    /* Tamaños */
+    --max-width: 1200px;
+}
+
+/* ==================== RESETEO Y ESTILOS GENERALES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+/* ==================== HEADER ==================== */
+body {
+    margin: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    overflow-x: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .header__menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    /*icono del menu*/
+    width: 30px;
+    height: 20px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+  }
+  
+  /* Barra de búsqueda y icono */
+.header__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .header__search-bar {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    padding: 5px 35px 5px 10px;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1em;
+    outline: none;
+    /* padding: 5px; */
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10; /* Coloca el icono al final de la barra */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+    width: 15px; /* Tamaño del icono */
+    height: 15px;
+    background-color: transparent; /* Cambiar por una imagen o ícono real */
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  
+  /* Main Container */
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .main-container__left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .main-container__title {
+    font-size: 3em;
+    color: var(--primary-color);
+  }
+  
+  .main-container__description {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  
+  .main-container__buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Buttons */
+.button {
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    background: none;
+    color: var(--text-color);
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 25px; 
+  }
+  
+  .button--primary {
+    background: var(--primary-color);
+    color: var(--background-color);
+  }
+
+  .button--secondary{
+    color: var(--primary-color);
+  }
+  
+  
+  /* Image Section */
+  .main-container__image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container__image {
+    max-width: 100%;
+  }
+  
+  /* Right Section */
+  .main-container__right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .date-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .date-card {
+    text-align: center;
+    background: var(--background-color);
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%;
+  }
+  
+  .date-card__date {
+    font-size: 1.5em;
+    color: var(--primary-color);
+  }
+
+  
+/* ==================== HERO SECTION ==================== */
+.hero {
+    text-align: center;
+    padding: var(--spacing-large) 0;
+    background: linear-gradient(180deg, var(--color-secondary), #333333);
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-primary);
+}
+
+.hero__subtitle {
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-gray);
+}
+
+.hero__button {
+    padding: var(--spacing-small) var(--spacing-large);
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* ==================== TOUR SECTION ==================== */
+.tour {
+    padding: var(--spacing-large) 0;
+    background-color: #111111;
+    color: var(--color-accent);
+}
+
+.tour__title {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+    font-size: 2rem;
+}
+
+.tour__content {
+    display: flex;
+    gap: var(--spacing-large);
+    justify-content: center;
+    text-align: center;
+}
+
+/* ==================== ARTISTS SECTION ==================== */
+.artists {
+    padding: var(--spacing-large) 0;
+    background-color: var(--color-secondary);
+}
+
+.artists__title {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
+
+.artists__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-medium);
+}
+
+.artists__card {
+    background-color: #222222;
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.artists__image {
+    border-radius: 8px;
+    margin-bottom: var(--spacing-small);
+}
+
+/* ==================== FEATURED SECTION ==================== */
+.featured {
+    padding: var(--spacing-large) 0;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.featured__title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+.featured__description {
+    color: var(--color-gray);
+}
+
+/* ==================== SHOWS SECTION ==================== */
+.shows {
+    padding: var(--spacing-large) 0;
+    background-color: var(--color-secondary);
+}
+
+.shows__title {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
+
+.shows__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-medium);
+}
+
+.shows__item {
+    background-color: #222222;
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ==================== MERCH SECTION ==================== */
+.merch {
+    padding: var(--spacing-large) 0;
+    background-color: #111111;
+}
+
+.merch__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-medium);
+}
+
+.merch__item {
+    text-align: center;
+    background-color: #222222;
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: var(--color-secondary);
+    text-align: center;
+    padding: var(--spacing-medium) 0;
+}
+
+.footer__text {
+    color: var(--color-gray);
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media (max-width: 768px) {
+    .header__nav .header__list {
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+
+    .tour__content,
+    .shows__list,
+    .artists__grid,
+    .merch__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+}
+
