@@ -60,43 +60,128 @@
           </main>
 
     <main>
-
-        <section class="tour">
-            <h2 class="tour__title">The Tour in a Nutshell</h2>
-            <div class="tour__content">
-                <article class="tour__date">
-                    <h3>08.12 / 7PM</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </article>
-                <article class="tour__date">
-                    <h3>09.15 / 8PM</h3>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="artists">
-            <h2 class="artists__title">The Top Artists</h2>
-            <div class="artists__grid">
-                <div class="artists__card">
-                    <img src="artist1.jpg" alt="Artist 1" class="artists__image">
-                    <h3 class="artists__name">The Rookies</h3>
-                    <p class="artists__description">Lorem ipsum dolor sit amet.</p>
+        <!-- seccion tour -->
+      <section class="tour-summary">
+        <div class="tour-summary__left">
+          <div class="tour-summary__line tour-summary__line--top"></div>
+          <div class="tour-summary__title">THE TOUR IN <br> A NUTSHELL</div>
+          <div class="tour-summary__line tour-summary__line--bottom"></div>
+          <div class="tour-summary__line--vertical"></div>
+          <p class="tour-summary__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim,
+          </p>
+        </div>
+        <div class="tour-summary__right">
+          <div class="tour-summary__event">
+            <span class="tour-summary__date">08.12 / 7PM</span>
+            <p class="tour-summary__details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <hr class="tour-summary__divider">
+          </div>
+          <div class="tour-summary__event">
+            <span class="tour-summary__date">09.15 / 8PM</span>
+            <p class="tour-summary__details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- seccion the top artist -->
+      <section class="top-artists">
+        <h2 class="top-artists__section-title">The Top Artists</h2> <!-- Título de la sección -->
+          <p class="top-artists__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <br>
+          <div class="top-artists__container">
+            <!-- Artista 1 -->
+            <div class="artist-card">
+              <img src="./img/imagen 2 proyecto web.png" alt="The Rookies" class="artist-card__image" />
+              <div class="artist-card__content">
+                <div class="artist-card__info">
+                  <h3 class="artist-card__title">The Rookies</h3>
+                  <p class="artist-card__subtitle">A Whole New Music Experience</p>
                 </div>
-                <div class="artists__card">
-                    <img src="artist2.jpg" alt="Artist 2" class="artists__image">
-                    <h3 class="artists__name">Violet Gears</h3>
-                    <p class="artists__description">Consectetur adipiscing elit.</p>
+                <div class="artist-card__dates">
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
                 </div>
+              </div>
             </div>
-        </section>
+            <!-- Artista 2 -->
+            <div class="artist-card">
+              <img src="./img/imagen 3 proyecto web.png" alt="Violet Gears" class="artist-card__image" />
+              <div class="artist-card__content">
+                <div class="artist-card__info">
+                  <h3 class="artist-card__title">Violet Gears</h3>
+                  <p class="artist-card__subtitle">A Whole New Music Experience</p>
+                </div>
+                <div class="artist-card__dates">
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <!-- Artista 3 -->
+            <div class="artist-card">
+              <img src="./img/imagen 4 proyecto web.png" alt="Black Punk" class="artist-card__image" />
+              <div class="artist-card__content">
+                <div class="artist-card__info">
+                  <h3 class="artist-card__title">Black Punk</h3>
+                  <p class="artist-card__subtitle">A Whole New Music Experience</p>
+                </div>
+                <div class="artist-card__dates">
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <!-- Artista 4 -->
+            <div class="artist-card">
+              <img src="./img/imagen 5 proyecto web.png" alt="Rock East" class="artist-card__image" />
+              <div class="artist-card__content">
+                <div class="artist-card__info">
+                  <h3 class="artist-card__title">Rock East</h3>
+                  <p class="artist-card__subtitle">A Whole New Music Experience</p>
+                </div>
+                <div class="artist-card__dates">
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                  <p>Sun May 03 | 7:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
 
-        <section class="featured">
-            <h2 class="featured__title">What's New?</h2>
-            <p class="featured__description">Check out the latest updates from our featured artists!</p>
-        </section>
+      <section class="whats-new">
+        <div class="whats-new__container">
+          <div class="whats-new__image">
+            <img src="./img/imagen 6 proyecto web.png" alt="Singer performing">
+          </div>
+          <div class="whats-new__content">
+            <h2 class="whats-new__title">WHAT'S NEW?</h2>
+            <p class="whats-new__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+            </p>
+            <div class="whats-new__buttons">
+              <button class="whats-new__button whats-new__button--primary">Buy Tickets</button>
+              <button class="whats-new__button whats-new__button--secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="whats-new__decorations">
+          <span class="whats-new__line whats-new__line--top"></span>
+          <span class="whats-new__line whats-new__line--bottom"></span>
+          <span class="whats-new__star"></span>
+        </div> -->
+      </section>
 
-        <section class="shows">
+      <section class="shows">
             <h2 class="shows__title">Our Shows</h2>
             <ul class="shows__list">
                 <li class="shows__item">
@@ -108,9 +193,9 @@
                     <p class="shows__details">Details about the show.</p>
                 </li>
             </ul>
-        </section>
+      </section>
 
-        <section class="merch">
+      <section class="merch">
             <h2 class="merch__title">Shop Our Merch</h2>
             <div class="merch__grid">
                 <div class="merch__item">
@@ -122,13 +207,11 @@
                     <p class="merch__name">Dark Hoodies</p>
                 </div>
             </div>
-        </section>
+      </section>
     </main>
 
     <footer class="footer">
         <p class="footer__text">© 2021 Concert Website. All rights reserved.</p>
     </footer>
-
-    
-</body>
+  </body>
 </html>

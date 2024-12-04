@@ -5,6 +5,7 @@
     --background-color: #1e1e1e;
     --text-color: #FFFFFF;
     --color-gray: #808080;
+    --transparente: transparent;
 
     /* Tipografía */
     --font-main: 'Arial', sans-serif;
@@ -228,68 +229,325 @@ body {
 }
 
 /* ==================== TOUR SECTION ==================== */
-.tour {
-    padding: var(--spacing-large) 0;
-    background-color: #111111;
-    color: var(--color-accent);
+/* Sección principal */
+.tour-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background-color: var(--primary-color); /* Fondo verde */
+  padding: 120px;
+  min-height: 600px; /* altura minima de la seccion tour*/
+  position: relative;
 }
 
-.tour__title {
-    text-align: center;
-    margin-bottom: var(--spacing-large);
-    font-size: 2rem;
+
+.tour-summary__line--top {
+  position: absolute;
+  top: -10px; 
+  left: 0%;
+  width: 300px; /* Longitud de la línea */
+  height: 2px;
+  background-color: var(--background-color);
+  transform: rotate(30deg); /* Cambia el ángulo de la linea */
+  transform-origin: left; /* Fija el punto de rotación al inicio */
 }
 
-.tour__content {
-    display: flex;
-    gap: var(--spacing-large);
-    justify-content: center;
-    text-align: center;
+.tour-summary__line--bottom {
+  position: absolute;
+  bottom: 200px; 
+  left: 0%; /* Ajusta para mover horizontalmente */
+  width: 400px; /* Longitud de la línea */
+  height: 2px;
+  background-color: var(--background-color);
+  transform: rotate(35deg); /* Misma dirección */
+  transform-origin: left; /* Fija el punto de rotación al inicio */
 }
 
-/* ==================== ARTISTS SECTION ==================== */
-.artists {
-    padding: var(--spacing-large) 0;
-    background-color: var(--color-secondary);
+
+.tour-summary__line--vertical {
+  position: absolute;
+  bottom: -20px; /* Ajusta la posición vertical */
+  left: 10%; /* Ajusta para posicionarla junto a la línea inferior */
+  width: 2px; /* Anchura de la línea vertical */
+  height: 105px; /* Altura de la línea */
+  background-color: var(--background-color);
+  transform: rotate(0deg); /* Sin rotación, posición vertical */
 }
 
-.artists__title {
-    text-align: center;
-    margin-bottom: var(--spacing-large);
+/* Columna izquierda */
+.tour-summary__left {
+  text-align: left;
 }
 
-.artists__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-medium);
+.tour-summary__title {
+  font-size: 4rem; /*tamaño del titulo*/
+  font-weight: bold; /*negrita al ttulo*/
+  line-height: 1.2; /*espaciado entre lineas*/ 
+  text-align: left;
+  color: var(--background-color);
+  margin-bottom: 20px;
+  word-break: break-word; /*permite dividir las palabras grandes donde sea nescesario*/
+  margin-top: 50px;
 }
 
-.artists__card {
-    background-color: #222222;
-    padding: var(--spacing-medium);
-    border-radius: 8px;
-    text-align: center;
+.tour-summary__description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--background-color);
 }
 
-.artists__image {
-    border-radius: 8px;
-    margin-bottom: var(--spacing-small);
+/* Columna derecha */
+.tour-summary__right {
+  text-align: justify;
 }
 
-/* ==================== FEATURED SECTION ==================== */
-.featured {
-    padding: var(--spacing-large) 0;
-    background-color: #1a1a1a;
-    text-align: center;
+.tour-summary__event {
+  margin-bottom: 30px;
 }
 
-.featured__title {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-medium);
+.tour-summary__date {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--background-color);
+  display: block;
+  margin-bottom: 10px;
 }
 
-.featured__description {
-    color: var(--color-gray);
+.tour-summary__details {
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: var(--background-color);
+}
+
+.tour-summary__divider {
+  border: none;
+  height: 2px;
+  background-color: var(--background-color);
+  margin-top: 15px;
+}
+
+/* ==================== THE TOP ARTIST ==================== */
+/* Estilo general de la sección */
+.top-artists {
+  background-color: var(--background-color);
+  padding: 40px 20px;
+  
+}
+
+.top-artists__section-title {
+  text-align: center;
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.top-artists__description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.top-artists__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las tarjetas */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  width: 45%; /* Ajustable para mayor o menor tamaño */
+  /* background-color: var(--background-color); */
+  color: var(--text-color);
+  /* border: 1px solid #333; */
+  overflow: hidden;
+}
+
+.artist-card__image {
+  width: 100%;
+  height: auto;
+}
+
+.artist-card__content {
+  display: flex;
+  justify-content: space-between; /* Alinea los bloques */
+  align-items: center; /* Centra verticalmente */
+  padding: 15px;
+}
+
+.artist-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra textos verticalmente */
+}
+
+.artist-card__title {
+  font-size: 1.5em;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.artist-card__subtitle {
+  font-size: 1em;
+  margin-top: 5px;
+  color: var(--primary-color);
+}
+
+.artist-card__dates {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-top: -25px; /* Ajusta la posición para estar alineado con el título */
+}
+
+@media screen and (max-width: 768px) {
+  .artist-card {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  }
+
+  .artist-card__content {
+    flex-direction: column;
+    align-items: flex-start; /* Alinea a la izquierda en dispositivos móviles */
+  }
+
+  .artist-card__dates {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}
+
+
+/* ==================== WHATS NEW? SECTION ==================== */
+.whats-new {
+  position: relative;
+  background-color: var(--primary-color);
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.whats-new__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whats-new__image img {
+  width: 100%;
+  max-width: 450px;
+}
+
+.whats-new__content {
+  position: relative;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.whats-new__title {
+  font-size: 48px;
+  /* font-weight: bold; */
+  color: var(--background-color);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.whats-new__title::before,
+.whats-new__title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 10px;
+}
+
+.whats-new__description {
+  color: var(--background-color);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.whats-new__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.whats-new__button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.whats-new__button--primary {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.whats-new__button--secondary {
+  background-color: var(--transparente);
+  color: var(--background-color);
+  border: 2px solid var(--background-color);
+}
+
+.whats-new__button:hover {
+  opacity: 0.8;
+}
+
+.whats-new__decorations {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: var(--background-color);
+}
+
+.whats-new__line {
+  position: absolute;
+  top: -200px;
+  left: 0%;
+  width: 400px;
+  height: 2px;
+  background-color: var(--background-color);
+  transform: rotate(30deg);
+  transform-origin: left;
+}
+
+.whats-new__line--top {
+  top: 10%;
+  left: 0;
+  width: 40%;
+}
+
+.whats-new__line--bottom {
+  bottom: 10%;
+  right: 0;
+  width: 60%;
+}
+
+.whats-new__star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
 }
 
 /* ==================== SHOWS SECTION ==================== */
