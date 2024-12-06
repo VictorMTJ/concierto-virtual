@@ -1,11 +1,11 @@
-@import url(/css/root.css);
-@import url(/css/header.css);
-@import url(/css/toursection.css);
-@import url(/css/whatsnew.css);
-@import url(/css/featuredartits.css);
-@import url(/css/show.css);
-@import url(/css/merch.css);
-@import url(/css/footer.css);
+@import url(root.css);
+@import url(header.css);
+@import url(toursection.css);
+@import url(whatsnew.css);
+@import url(featuredartits.css);
+@import url(show.css);
+@import url(merch.css);
+@import url(footer.css);
 
 /* ==================== RESETEO Y ESTILOS GENERALES ==================== */
 * {
@@ -37,8 +37,6 @@ a {
     margin: 0 auto;
     padding: 0 var(--spacing-medium);
 }
-
-
 /* ==================== MEDIA QUERIES ==================== */
 @media (max-width: 768px) {
     .header__nav .header__list {
