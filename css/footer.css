@@ -1,0 +1,23 @@
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium) 0;
+}
+
+.footer__content{
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  justify-content: space-evenly;
+  color: var(--background-color); 
+}
+
+.copyright{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.copyright__title{
+  color: var(--background-color);
+  font-size: 1rem;
+}

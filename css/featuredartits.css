@@ -1,0 +1,86 @@
+/* ==================== featured artits ==================*/
+/* Sección general */
+.featured-artists {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-image: url('/img/background.jpeg'); /* Fondo de textura */
+    background-size: cover;
+    background-position: center;
+    color: #a8db8f; /* Verde */
+  }
+  
+  /* Contenedor izquierdo */
+  .featured-artists__left {
+    flex: 1;
+  }
+  
+  .featured-artists__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #a8db8f;
+  }
+  
+  .featured-artists__description {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 20px 0;
+  }
+  
+  .featured-artists__button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #101010;
+    background-color: #a8db8f;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .featured-artists__button:hover {
+    background-color: white;
+    color: #a8db8f;
+  }
+  
+  /* Contenedor derecho (imagen) */
+  .featured-artists__right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .featured-artists__image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #a8db8f;
+    border-radius: 10px;
+  }
+  
+  /* Información adicional */
+  .featured-artists__info {
+    position: absolute;
+    top: 3200px;
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .featured-artists__date {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .featured-artists__info-text {
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  

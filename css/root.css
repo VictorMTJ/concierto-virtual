@@ -1,0 +1,21 @@
+/* ==================== VARIABLES GLOBALES ==================== */
+:root {
+    /* Colores */
+    --primary-color: #8bd876;
+    --background-color: #1e1e1e;
+    --text-color: #FFFFFF;
+    --color-gray: #808080;
+    --transparente: transparent;
+
+    /* Tipografía */
+    --font-main: 'Arial', sans-serif;
+    --font-size-base: 16px;
+
+    /* Espaciado */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+
+    /* Tamaños */
+    --max-width: 1200px;
+}

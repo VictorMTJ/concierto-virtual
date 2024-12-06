@@ -1,0 +1,199 @@
+/* ==================== TOUR SECTION ==================== */
+/* Sección principal */
+.tour-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background-color: var(--primary-color); /* Fondo verde */
+    padding: 120px;
+    min-height: 600px; /* altura minima de la seccion tour*/
+    position: relative;
+  }
+  
+  
+  .tour-summary__line--top {
+    position: absolute;
+    top: -10px; 
+    left: 0%;
+    width: 300px; /* Longitud de la línea */
+    height: 2px;
+    background-color: var(--background-color);
+    transform: rotate(30deg); /* Cambia el ángulo de la linea */
+    transform-origin: left; /* Fija el punto de rotación al inicio */
+  }
+  
+  .tour-summary__line--bottom {
+    position: absolute;
+    bottom: 200px; 
+    left: 0%; /* Ajusta para mover horizontalmente */
+    width: 400px; /* Longitud de la línea */
+    height: 2px;
+    background-color: var(--background-color);
+    transform: rotate(35deg); /* Misma dirección */
+    transform-origin: left; /* Fija el punto de rotación al inicio */
+  }
+  
+  
+  .tour-summary__line--vertical {
+    position: absolute;
+    bottom: -20px; /* Ajusta la posición vertical */
+    left: 10%; /* Ajusta para posicionarla junto a la línea inferior */
+    width: 2px; /* Anchura de la línea vertical */
+    height: 105px; /* Altura de la línea */
+    background-color: var(--background-color);
+    transform: rotate(0deg); /* Sin rotación, posición vertical */
+  }
+  
+  /* Columna izquierda */
+  .tour-summary__left {
+    text-align: left;
+  }
+  
+  .tour-summary__title {
+    font-size: 4rem; /*tamaño del titulo*/
+    font-weight: bold; /*negrita al ttulo*/
+    line-height: 1.2; /*espaciado entre lineas*/ 
+    text-align: left;
+    color: var(--background-color);
+    margin-bottom: 20px;
+    word-break: break-word; /*permite dividir las palabras grandes donde sea nescesario*/
+    margin-top: 50px;
+  }
+  
+  .tour-summary__description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--background-color);
+  }
+  
+  /* Columna derecha */
+  .tour-summary__right {
+    text-align: justify;
+  }
+  
+  .tour-summary__event {
+    margin-bottom: 30px;
+  }
+  
+  .tour-summary__date {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--background-color);
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .tour-summary__details {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: var(--background-color);
+  }
+  
+  .tour-summary__divider {
+    border: none;
+    height: 2px;
+    background-color: var(--background-color);
+    margin-top: 15px;
+  }
+  
+  /* ==================== THE TOP ARTIST ==================== */
+  /* Estilo general de la sección */
+  .top-artists {
+    background-color: var(--background-color);
+    background-image: url('/img/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    
+  }
+  
+  .top-artists__section-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+  }
+  
+  .top-artists__description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  .top-artists__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .artist-card {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Ajustable para mayor o menor tamaño */
+    /* background-color: var(--background-color); */
+    color: var(--text-color);
+    /* border: 1px solid #333; */
+    overflow: hidden;
+  }
+  
+  .artist-card__image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .artist-card__content {
+    display: flex;
+    justify-content: space-between; /* Alinea los bloques */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px;
+  }
+  
+  .artist-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra textos verticalmente */
+  }
+  
+  .artist-card__title {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--primary-color);
+  }
+  
+  .artist-card__subtitle {
+    font-size: 1em;
+    margin-top: 5px;
+    color: var(--primary-color);
+  }
+  
+  .artist-card__dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: -25px; /* Ajusta la posición para estar alineado con el título */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .artist-card {
+      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+  
+    .artist-card__content {
+      flex-direction: column;
+      align-items: flex-start; /* Alinea a la izquierda en dispositivos móviles */
+    }
+  
+    .artist-card__dates {
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  }
+  
