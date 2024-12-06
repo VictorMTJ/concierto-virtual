@@ -21,6 +21,7 @@ body {
   .header__menu {
     display: flex;
     align-items: center;
+    color: var(--text-color);
   }
   
   .menu-icon {
@@ -86,6 +87,7 @@ body {
   .main-container__description {
     font-size: 1.2em;
     margin: 20px 0;
+    color: var(--text-color);
   }
   
   .main-container__buttons {
@@ -149,6 +151,10 @@ body {
   .date-card__date {
     font-size: 1.5em;
     color: var(--primary-color);
+  }
+
+  .date-card__details{
+    color: var(--text-color);
   }
 
   .main-container__header-oval1{
