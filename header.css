@@ -3,7 +3,7 @@ body {
     margin: 0;
     height: 1500px;
     background: var(--background-color);
-    background-image: url('/img/background.jpeg');
+    background-image: url('background.jpeg');
     background-size: cover;
     background-position: center;
     color: var(--text-color);

@@ -1,0 +1,102 @@
+ /* ==================== THE TOP ARTIST ==================== */
+  /* Estilo general de la sección */
+  .top-artists {
+    background-color: var(--background-color);
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    
+  }
+  
+  .top-artists__section-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+  }
+  
+  .top-artists__description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    color: var(--text-color);
+  }
+  
+  .top-artists__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .artist-card {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Ajustable para mayor o menor tamaño */
+    /* background-color: var(--background-color); */
+    color: var(--text-color);
+    /* border: 1px solid #333; */
+    overflow: hidden;
+  }
+  
+  .artist-card__image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .artist-card__content {
+    display: flex;
+    justify-content: space-between; /* Alinea los bloques */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px;
+  }
+  
+  .artist-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra textos verticalmente */
+  }
+  
+  .artist-card__title {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--primary-color);
+  }
+  
+  .artist-card__subtitle {
+    font-size: 1em;
+    margin-top: 5px;
+    color: var(--primary-color);
+  }
+  
+  .artist-card__dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: -25px; /* Ajusta la posición para estar alineado con el título */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .artist-card {
+      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+  
+    .artist-card__content {
+      flex-direction: column;
+      align-items: flex-start; /* Alinea a la izquierda en dispositivos móviles */
+    }
+  
+    .artist-card__dates {
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  }
+  

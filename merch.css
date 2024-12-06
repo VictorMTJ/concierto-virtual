@@ -1,7 +1,7 @@
 /* ==================== MERCH SECTION ==================== */
 /* Contenedor principal */
 .merch {
-    background-image: url('/img/background.jpeg');
+    background-image: url('background.jpeg');
     background-size: cover;
     background-position: center;
     color: var(--primary-color);

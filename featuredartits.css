@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background-image: url('/img/background.jpeg'); /* Fondo de textura */
+    background-image: url('background.jpeg'); 
     background-size: cover;
     background-position: center;
     color: #a8db8f; /* Verde */
